@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Food Safety Awareness</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#" onclick="showTab('home')">Home</a></li>
+            <li><a href="#" onclick="showTab('awareness')">Awareness</a></li>
+            <li><a href="#" onclick="showTab('ideas')">Share Ideas</a></li>
+            <li><a href="#" onclick="showTab('chatbot')">Chatbot</a></li>
+            <li><a href="#" onclick="showTab('game')">Game</a></li>
+        </ul>
+    </nav>
+
+    <section id="home" class="active">
+        <h1>Welcome to Food Safety Awareness</h1>
+        <p>This site raises awareness about unsafe food ingredients often used in the U.S. that are banned in other countries.</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Hamburger_(black_bg).jpg/640px-Hamburger_(black_bg).jpg" alt="Junk Food">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Healthy_food.jpg/640px-Healthy_food.jpg" alt="Healthy Food">
+    </section>
+
+    <section id="awareness">
+        <h2>Why is American Food Unhealthier?</h2>
+        <p>While people around the world eat similar dishes, American versions often contain harmful additives and overly processed ingredients. This has made obesity and chronic illness more prevalent in the U.S.</p>
+        <ul>
+            <li>Use of additives banned in other countries (e.g., Red 40, BHA, brominated oils)</li>
+            <li>High reliance on processed and fast food</li>
+            <li>Weaker food safety regulations</li>
+            <li>Marketing aimed at children and vulnerable populations</li>
+            <li>Portion sizes significantly larger than international norms</li>
+        </ul>
+    </section>
+
+    <section id="ideas">
+        <h2>Share Your Awareness Ideas</h2>
+        <form id="ideaForm">
+            <input type="text" id="ideaInput" placeholder="Enter your idea..." required>
+            <button type="submit">Post</button>
+        </form>
+        <ul id="ideaList"></ul>
+    </section>
+
+    <section id="chatbot">
+        <h2>Ask a Question</h2>
+        <div id="chatbox">
+            <div id="messages"></div>
+            <input type="text" id="userInput" placeholder="Type your question...">
+            <button onclick="chat()">Send</button>
+        </div>
+    </section>
+
+    <section id="game">
+        <h2>Healthy Food Game</h2>
+        <div id="gameArea">
+            <p id="question">Which food is healthier?</p>
+            <button id="option1" onclick="choose(0)">Option 1</button>
+            <button id="option2" onclick="choose(1)">Option 2</button>
+            <p id="result"></p>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
